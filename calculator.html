@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .calculator {
+      border-radius: 12px;
+      padding: 20px;
+      background: #333;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .display {
+      width: 100%;
+      padding: 10px;
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-align: right;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      background: #555;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #777;
+    }
+
+    .buttons .equals {
+      background-color: #0d6efd;
+    }
+
+    .buttons .clear {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="display" disabled>
+    <div class="buttons">
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('*')">×</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('-')">−</button>
+
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('+')">+</button>
+
+      <button class="equals" onclick="calculateResult()" style="grid-column: spa
+
